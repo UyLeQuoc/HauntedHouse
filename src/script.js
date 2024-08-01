@@ -46,9 +46,12 @@ loadingManager.onLoad = () => {
     //Add button animation
     progressContainer.appendChild(startButton)
     gsap.from(startButton, {opacity: 0, duration: 1, delay: 1})
+    //remove
+    
     
     startButton.onclick = () => {
         gsap.to(progressContainer, {opacity: 0, duration: 1})
+        progressContainer.remove()
         //Start animation
         tick()
         //Add Sound
